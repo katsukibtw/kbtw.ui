@@ -1,0 +1,174 @@
+.size__xsm {
+  --size-multiplier: 0.25;
+  width: 9px;
+}
+
+.size__sm {
+  --size-multiplier: 0.5;
+  width: 18px;
+}
+
+.size__md {
+  --size-multiplier: 1;
+  width: 27px;
+}
+
+.size__lg {
+  --size-multiplier: 1.5;
+  width: 36px;
+}
+
+.size__xlg {
+  --size-multiplier: 2;
+  width: 54px;
+}
+
+.circle-loader {
+  &__wrapper {
+    aspect-ratio: 1;
+    padding: 0.25rem;
+  }
+
+  &__normal {
+    &__light {
+      --accent-color: var(--kbtw-color-normal-900);
+      --shade-color: var(--kbtw-color-normal-200);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-normal-0);
+      --shade-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__secondary {
+    &__light {
+      --accent-color: var(--kbtw-color-secondary-500);
+      --shade-color: var(--kbtw-color-normal-200);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-secondary-100);
+      --shade-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__primary {
+    &__light {
+      --accent-color: var(--kbtw-color-primary-400);
+      --shade-color: var(--kbtw-color-normal-200);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-primary-100);
+      --shade-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__warning {
+    &__light {
+      --accent-color: var(--kbtw-color-warning-500);
+      --shade-color: var(--kbtw-color-normal-200);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-warning-100);
+      --shade-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__error {
+    & > div > svg > rect:last-child {
+      animation: unset;
+      stroke-dasharray: 100 0 !important;
+      transition-duration: 0.4s;
+      transition-property: stroke-width, stroke, stroke-dasharray;
+      transition-timing-function: ease;
+    }
+    &__light {
+      --accent-color: var(--kbtw-color-error-500);
+      --shade-color: var(--kbtw-color-normal-200);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-error-300);
+      --shade-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__calm {
+    &__light {
+      --accent-color: var(--kbtw-color-calm-500);
+      --shade-color: var(--kbtw-color-normal-200);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-calm-100);
+      --shade-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__base {
+    background: transparent;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 100%;
+    position: relative;
+    transition-property: width, height;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+
+    &__svg {
+      position: absolute;
+      inset: 2.5%;
+      width: 95%;
+      height: 95%;
+      overflow: visible;
+    }
+
+    &__bg-rect {
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+      stroke: var(--shade-color);
+      z-index: 10;
+      stroke-width: 4px;
+      stroke-linecap: round;
+      rx: 50%;
+      border-radius: 1rem;
+      transition-duration: 0.4s;
+      transition-property: stroke-width, stroke;
+      transition-timing-function: ease;
+    }
+
+    &__rect {
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+      z-index: 12;
+      stroke: var(--accent-color);
+      stroke-width: 4px;
+      stroke-linecap: round;
+      rx: 50%;
+      border-radius: 1rem;
+      transition-duration: 0.4s;
+      transition-property: stroke-width, stroke, stroke-dasharray;
+      transition-timing-function: ease;
+      stroke-dasharray: 85 15;
+
+      animation: rotate-default 1000ms linear infinite;
+    }
+  }
+}
+
+@keyframes rotate-default {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -100px;
+  }
+}
+
+@keyframes rotate-second {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -168px;
+  }
+}

@@ -1,0 +1,105 @@
+.ksurface {
+  color: white;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.75rem;
+
+  &__default {
+    border-radius: 0.5rem;
+  }
+
+  &__squared {
+    border-radius: 0.25rem;
+  }
+
+  &__rounded {
+    border-radius: 100rem;
+  }
+
+  &__primary {
+    &__light {
+      --bg-color: var(--kbtw-color-primary-50);
+      --fg-color: var(--kbtw-color-primary-800);
+    }
+    &__dark {
+      --bg-color: var(--kbtw-color-primary-800);
+      --fg-color: var(--kbtw-color-primary-200);
+    }
+  }
+
+  &__secondary {
+    &__light {
+      --bg-color: var(--kbtw-color-secondary-50);
+      --fg-color: var(--kbtw-color-secondary-800);
+    }
+    &__dark {
+      --bg-color: var(--kbtw-color-secondary-800);
+      --fg-color: var(--kbtw-color-secondary-200);
+    }
+  }
+
+  &__normal {
+    &__light {
+      --bg-color: var(--kbtw-color-normal-50);
+      --fg-color: var(--kbtw-color-normal-800);
+    }
+    &__dark {
+      --bg-color: var(--kbtw-color-normal-800);
+      --fg-color: var(--kbtw-color-normal-200);
+    }
+  }
+
+  &__warning {
+    &__light {
+      --bg-color: var(--kbtw-color-warning-50);
+      --fg-color: var(--kbtw-color-warning-800);
+    }
+    &__dark {
+      --bg-color: var(--kbtw-color-warning-800);
+      --fg-color: var(--kbtw-color-warning-200);
+    }
+  }
+
+  &__error {
+    &__light {
+      --bg-color: var(--kbtw-color-error-50);
+      --fg-color: var(--kbtw-color-error-800);
+    }
+    &__dark {
+      --bg-color: var(--kbtw-color-error-800);
+      --fg-color: var(--kbtw-color-error-200);
+    }
+  }
+
+  &__calm {
+    &__light {
+      --bg-color: var(--kbtw-color-calm-50);
+      --fg-color: var(--kbtw-color-calm-800);
+    }
+    &__dark {
+      --bg-color: var(--kbtw-color-calm-800);
+      --fg-color: var(--kbtw-color-calm-200);
+    }
+  }
+
+  &__solid {
+    background: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    color: var(--fg-color);
+  }
+  &__outlined {
+    background: transparent;
+    border: 1px solid var(--bg-color);
+    color: var(--fg-color);
+  }
+  &__plain {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--fg-color);
+  }
+  &__soft {
+    background: hsl(from var(--bg-color) h s l / 0.5);
+    border: 1px solid hsla(from var(--bg-color) h s l / 0.5);
+    color: var(--fg-color);
+  }
+}

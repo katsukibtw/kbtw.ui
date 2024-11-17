@@ -1,0 +1,82 @@
+.kheading {
+  font-family: Onest, system-ui, sans-serif, monospace;
+
+  &__normal {
+    &__light {
+      color: var(--kbtw-color-normal-900);
+    }
+    &__dark {
+      color: var(--kbtw-color-normal-0);
+    }
+  }
+
+  &__secondary {
+    &__light {
+      color: var(--kbtw-color-secondary-500);
+    }
+    &__dark {
+      color: var(--kbtw-color-secondary-100);
+    }
+  }
+
+  &__primary {
+    &__light {
+      color: var(--kbtw-color-primary-400);
+    }
+    &__dark {
+      color: var(--kbtw-color-primary-100);
+    }
+  }
+
+  &__warning {
+    &__light {
+      color: var(--kbtw-color-warning-500);
+    }
+    &__dark {
+      color: var(--kbtw-color-warning-100);
+    }
+  }
+
+  &__error {
+    &__light {
+      color: var(--kbtw-color-error-500);
+    }
+    &__dark {
+      color: var(--kbtw-color-error-100);
+    }
+  }
+
+  &__calm {
+    &__light {
+      color: var(--kbtw-color-calm-500);
+    }
+    &__dark {
+      color: var(--kbtw-color-calm-100);
+    }
+  }
+
+  &__h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  &__h2 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  &__h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  &__h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}

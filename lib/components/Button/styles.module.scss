@@ -1,0 +1,255 @@
+.kbutton {
+  color: white;
+  border: 0;
+  padding: calc(0.3rem * var(--size-multiplier, 1))
+    calc(0.75rem * var(--size-multiplier, 1));
+  cursor: pointer;
+  transition-property: background, color, border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+
+  &:has(&__decorator) {
+    padding: calc(0.3rem * var(--size-multiplier, 1))
+      calc(0.6rem * var(--size-multiplier, 1));
+  }
+
+  &__decorator {
+    min-width: 1rem;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+
+  &__primary {
+    &__light {
+      --accent-color: var(--kbtw-color-primary-400, #f0b27a);
+      --solid-fg-color: var(--kbtw-color-primary-0, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-primary-300);
+      --soft-bg-color: var(--kbtw-color-primary-50);
+      --soft-fg-color: var(--kbtw-color-primary-500);
+      --disabled-color: var(--kbtw-color-primary-700);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-primary-100, #f0b27a);
+      --solid-fg-color: var(--kbtw-color-primary-900, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-primary-50);
+      --soft-bg-color: hsl(
+        from var(--kbtw-color-primary-800) h calc(s * 0.4) l
+      );
+      --soft-fg-color: var(--kbtw-color-primary-100);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__secondary {
+    &__light {
+      --accent-color: var(--kbtw-color-secondary-400, #f0b27a);
+      --solid-fg-color: var(--kbtw-color-secondary-0, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-secondary-300);
+      --soft-bg-color: var(--kbtw-color-secondary-50);
+      --soft-fg-color: var(--kbtw-color-secondary-500);
+      --disabled-color: var(--kbtw-color-secondary-700);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-secondary-100, #a2d9ce);
+      --solid-fg-color: var(--kbtw-color-secondary-900, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-secondary-50);
+      --soft-bg-color: hsl(
+        from var(--kbtw-color-secondary-800) h calc(s * 0.6) l
+      );
+      --soft-fg-color: var(--kbtw-color-secondary-100);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__normal {
+    &__light {
+      --accent-color: var(--kbtw-color-normal-600, #f0b27a);
+      --solid-fg-color: var(--kbtw-color-normal-0, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-normal-500);
+      --soft-bg-color: var(--kbtw-color-normal-100);
+      --soft-fg-color: var(--kbtw-color-normal-500);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-normal-50, #f0b27a);
+      --solid-fg-color: var(--kbtw-color-normal-900, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-normal-0);
+      --soft-bg-color: var(--kbtw-color-normal-700);
+      --soft-fg-color: var(--kbtw-color-normal-50);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__warning {
+    &__light {
+      --accent-color: var(--kbtw-color-warning-500, #a2d9ce);
+      --solid-fg-color: var(--kbtw-color-warning-0, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-warning-300);
+      --soft-bg-color: var(--kbtw-color-warning-50);
+      --soft-fg-color: var(--kbtw-color-warning-600);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-warning-100, #a2d9ce);
+      --solid-fg-color: var(--kbtw-color-warning-900, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-warning-50);
+      --soft-bg-color: hsl(
+        from var(--kbtw-color-warning-800) h calc(s * 0.6) l
+      );
+      --soft-fg-color: var(--kbtw-color-warning-100);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__error {
+    &__light {
+      --accent-color: var(--kbtw-color-error-500, #a2d9ce);
+      --solid-fg-color: var(--kbtw-color-error-0, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-error-300);
+      --soft-bg-color: var(--kbtw-color-error-50);
+      --soft-fg-color: var(--kbtw-color-error-600);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-error-100, #a2d9ce);
+      --solid-fg-color: var(--kbtw-color-error-900, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-error-50);
+      --soft-bg-color: hsl(from var(--kbtw-color-error-800) h calc(s * 0.6) l);
+      --soft-fg-color: var(--kbtw-color-error-100);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__calm {
+    &__light {
+      --accent-color: var(--kbtw-color-calm-400, #a2d9ce);
+      --solid-fg-color: var(--kbtw-color-calm-0, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-calm-300);
+      --soft-bg-color: var(--kbtw-color-calm-50);
+      --soft-fg-color: var(--kbtw-color-calm-500);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-calm-100, #a2d9ce);
+      --solid-fg-color: var(--kbtw-color-calm-900, #23201e);
+      --fg-color: var(--accent-color);
+      --shade-color: var(--kbtw-color-calm-50);
+      --soft-bg-color: hsl(from var(--kbtw-color-calm-800) h calc(s * 0.6) l);
+      --soft-fg-color: var(--kbtw-color-calm-100);
+      --disabled-color: var(--kbtw-color-normal-700);
+    }
+  }
+
+  &__solid {
+    background: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    color: var(--solid-fg-color);
+
+    &:hover {
+      transition-property: background, color, border-color;
+      transition-duration: 0.4s;
+      transition-timing-function: ease;
+      background: var(--shade-color);
+      border-color: var(--shade-color);
+    }
+
+    &:active {
+      transition-property: background, color, border-color;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+      background: var(--accent-color);
+      border-color: var(--shade-color);
+    }
+
+    &:disabled {
+      transition-property: background, color, border-color;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+      background: var(--disabled-color);
+    }
+  }
+  &__outlined {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--fg-color);
+
+    &:hover {
+      transition-property: background, color, border-color;
+      transition-duration: 0.4s;
+      transition-timing-function: ease;
+      background: hsl(from var(--accent-color) h s l / 0.3);
+      border-color: var(--shade-color);
+    }
+    &:disabled {
+      transition-property: background, color, border-color;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+      background: var(--disabled-color);
+    }
+  }
+
+  &__plain {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--fg-color);
+
+    &:hover {
+      transition-property: background, color, border-color;
+      transition-duration: 0.4s;
+      transition-timing-function: ease;
+      background: hsl(from var(--accent-color) h s l / 0.15);
+      border-color: hsl(from var(--accent-color) h s l / 0.3);
+    }
+    &:disabled {
+      transition-property: background, color, border-color;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+      background: var(--disabled-color);
+    }
+  }
+
+  &__soft {
+    background: var(--soft-bg-color);
+    border: 1px solid hsl(from var(--accent-color) h s l / 0.25);
+    color: var(--soft-fg-color);
+
+    &:hover {
+      transition-property: background, color, border-color;
+      transition-duration: 0.4s;
+      transition-timing-function: ease;
+      background: hsl(from var(--soft-bg-color) h s calc(l * 1.5));
+      border-color: hsl(from var(--shade-color) h s l / 0.3);
+    }
+    &:disabled {
+      transition-property: background, color, border-color;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+      background: var(--disabled-color);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "@/assets/OnestFont/onest.css";
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+@import "@/styles/globals.scss";
+
+:root:has(.kprovider) {
+  font-family: Onest, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root:has(.kprovider__dark) {
+  background-color: var(--kbtw-color-normal-900);
+}
+
+:root:has(.kprovider__light) {
+  background-color: var(--kbtw-color-normal-0);
+}
+
+.kprovider {
+  font-family: Onest, system-ui, monospace;
+}
+
+.kprovider > * {
+  font-family: Onest, system-ui, monospace;
+  color: var(--kbtw-color-normal-0);
+}
+
+.kprovider__dark {
+  color: var(--kbtw-color-normal-900);
+}
