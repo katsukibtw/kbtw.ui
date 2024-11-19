@@ -1,4 +1,4 @@
-<span style="width: 100%; display: flex; align-items: center; justify-content: center;">
+<span style="width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem;">
   <img src="./assets/banner.webp" alt="project banner"/>
 </span>
 
