@@ -106,12 +106,15 @@
 
 .corners__default {
   border-radius: 0.5rem;
+  --kbtw-ui-corners: 0.5rem;
 }
 
 .corners__squared {
   border-radius: 0.25rem;
+  --kbtw-ui-corners: 0.25rem;
 }
 
 .corners__rounded {
   border-radius: 100rem;
+  --kbtw-ui-corners: 100rem;
 }
