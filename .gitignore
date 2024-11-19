@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Timestamped files
-*.timestamp*
+# Timestamped files/mjs
+*.mjs
