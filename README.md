@@ -1,5 +1,5 @@
 <span style="width: 100%; display: flex; align-items: center; justify-content: center;">
-  <img src="./assets/New Project.webp" alt="project banner"/>
+  <img src="./assets/banner.webp" alt="project banner"/>
 </span>
 
 ---
