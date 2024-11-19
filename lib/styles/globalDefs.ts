@@ -5,6 +5,7 @@ export type ColorTypesDef =
   | "secondary"
   | "normal"
   | "warning"
+  | "destructive"
   | "error"
   | "calm";
 

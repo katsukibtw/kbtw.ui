@@ -14,7 +14,7 @@ const permanentColors: PermanentColors = {
     "800": "#473014",
     "900": "#2d1d0a",
   },
-  error: {
+  destructive: {
     "0": "#fff2ed",
     "50": "#ffd6c9",
     "100": "#ffbba6",
@@ -26,6 +26,19 @@ const permanentColors: PermanentColors = {
     "700": "#632716",
     "800": "#481a0d",
     "900": "#2e0e06",
+  },
+  error: {
+    "0": "#ffebe8",
+    "50": "#fec3ba",
+    "100": "#f89b8c",
+    "200": "#ef6f5f",
+    "300": "#e23a2d",
+    "400": "#db0000",
+    "500": "#be0000",
+    "600": "#6d0000",
+    "700": "#540000",
+    "800": "#3c0000",
+    "900": "#260000",
   },
   calm: {
     "0": "#f5effc",

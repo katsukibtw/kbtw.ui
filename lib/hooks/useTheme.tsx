@@ -16,6 +16,7 @@ export interface ColorShading {
 }
 
 export interface PermanentColors {
+  destructive: ColorShading;
   warning: ColorShading;
   error: ColorShading;
   calm: ColorShading;

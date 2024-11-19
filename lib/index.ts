@@ -1,6 +1,7 @@
 // components
 export { Button } from "./components/Button/index.tsx";
 export { ButtonGroup } from "./components/ButtonGroup/index.tsx";
+export { IconButton } from "./components/IconButton/index.tsx";
 export { ThemeProvider } from "./components/ThemeProvider/index.tsx";
 export { Input } from "./components/Input/index.tsx";
 export { Surface } from "./components/Surface/index.tsx";

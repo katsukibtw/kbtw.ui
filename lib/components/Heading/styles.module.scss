@@ -37,6 +37,15 @@
     }
   }
 
+  &__destructive {
+    &__light {
+      color: var(--kbtw-color-destructive-500);
+    }
+    &__dark {
+      color: var(--kbtw-color-destructive-100);
+    }
+  }
+
   &__error {
     &__light {
       color: var(--kbtw-color-error-500);

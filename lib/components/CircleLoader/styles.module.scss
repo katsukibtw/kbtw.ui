@@ -73,6 +73,17 @@
     }
   }
 
+  &__destructive {
+    &__light {
+      --accent-color: var(--kbtw-color-destructive-500);
+      --shade-color: var(--kbtw-color-normal-200);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-destructive-100);
+      --shade-color: var(--kbtw-color-normal-700);
+    }
+  }
+
   &__error {
     & > div > svg > rect:last-child {
       animation: unset;

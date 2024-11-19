@@ -13,11 +13,25 @@ interface Props extends PropsWithChildren {
 }
 
 export const ThemeProvider = ({ children, defaultDark = true }: Props) => {
+  let isDarkFromLS = localStorage.getItem("kbtw-ui-isdark");
+
+  (() => {
+    if (isDarkFromLS === null) {
+      localStorage.setItem("kbtw-ui-isdark", String(defaultDark));
+      isDarkFromLS = String(defaultDark);
+    }
+  })();
+
   const [preset] = useState<ThemePresetDef>("default");
-  const [isDark, setIsDark] = useState<boolean>(defaultDark);
+  const [isDark, setIsDark] = useState<boolean>(
+    String(isDarkFromLS).toLowerCase() === "true",
+  );
   const [currentTheme] = useState<Theme>(defaultPreset);
 
-  const toggleDarkTheme = () => setIsDark(!isDark);
+  const toggleDarkTheme = () => {
+    localStorage.setItem("kbtw-ui-isdark", String(!isDark));
+    setIsDark(!isDark);
+  };
 
   // this does nothing for now
   const switchPreset = () => {};

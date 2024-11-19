@@ -60,6 +60,17 @@
     }
   }
 
+  &__destructive {
+    &__light {
+      --bg-color: var(--kbtw-color-destructive-50);
+      --fg-color: var(--kbtw-color-destructive-800);
+    }
+    &__dark {
+      --bg-color: var(--kbtw-color-destructive-800);
+      --fg-color: var(--kbtw-color-destructive-200);
+    }
+  }
+
   &__error {
     &__light {
       --bg-color: var(--kbtw-color-error-50);

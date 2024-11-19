@@ -56,6 +56,19 @@
     }
   }
 
+  &__destructive {
+    &__light {
+      --accent-color: var(--kbtw-color-destructive-500);
+      --shade-color: var(--kbtw-color-normal-200);
+      --bg-color: var(--kbtw-color-normal-50);
+    }
+    &__dark {
+      --accent-color: var(--kbtw-color-destructive-100);
+      --shade-color: var(--kbtw-color-normal-700);
+      --bg-color: var(--kbtw-color-normal-800);
+    }
+  }
+
   &__error {
     & > div > div {
       animation: unset;

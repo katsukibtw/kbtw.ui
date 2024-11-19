@@ -1,8 +1,7 @@
-.kbutton {
+.kicon-button {
   color: white;
   border: 0;
-  padding: calc(0.3rem * var(--size-multiplier, 1))
-    calc(0.75rem * var(--size-multiplier, 1));
+  padding: calc(0.6rem * var(--size-multiplier, 1));
   cursor: pointer;
   transition-property: background, color, border-color;
   transition-duration: 0.4s;
@@ -13,6 +12,7 @@
   justify-content: center;
   gap: 0.3rem;
   font-size: 0.9rem;
+  aspect-ratio: 1;
 
   &:has(&__decorator) {
     padding: calc(0.3rem * var(--size-multiplier, 1))
@@ -39,8 +39,8 @@
       --solid-fg-color: var(--kbtw-color-primary-0, #23201e);
       --fg-color: var(--accent-color);
       --shade-color: var(--kbtw-color-primary-300);
-      --soft-bg-color: var(--kbtw-color-primary-200);
-      --soft-fg-color: var(--kbtw-color-primary-700);
+      --soft-bg-color: var(--kbtw-color-primary-50);
+      --soft-fg-color: var(--kbtw-color-primary-500);
       --disabled-color: var(--kbtw-color-primary-700);
     }
     &__dark {
@@ -62,8 +62,8 @@
       --solid-fg-color: var(--kbtw-color-secondary-0, #23201e);
       --fg-color: var(--accent-color);
       --shade-color: var(--kbtw-color-secondary-300);
-      --soft-bg-color: var(--kbtw-color-secondary-200);
-      --soft-fg-color: var(--kbtw-color-secondary-700);
+      --soft-bg-color: var(--kbtw-color-secondary-50);
+      --soft-fg-color: var(--kbtw-color-secondary-500);
       --disabled-color: var(--kbtw-color-secondary-700);
     }
     &__dark {
@@ -85,8 +85,8 @@
       --solid-fg-color: var(--kbtw-color-normal-0, #23201e);
       --fg-color: var(--accent-color);
       --shade-color: var(--kbtw-color-normal-500);
-      --soft-bg-color: hsl(from var(--kbtw-color-normal-400) h s calc(l * 1.3));
-      --soft-fg-color: var(--kbtw-color-normal-700);
+      --soft-bg-color: var(--kbtw-color-normal-100);
+      --soft-fg-color: var(--kbtw-color-normal-500);
       --disabled-color: var(--kbtw-color-normal-700);
     }
     &__dark {
@@ -106,8 +106,8 @@
       --solid-fg-color: var(--kbtw-color-warning-0, #23201e);
       --fg-color: var(--accent-color);
       --shade-color: var(--kbtw-color-warning-300);
-      --soft-bg-color: var(--kbtw-color-warning-400);
-      --soft-fg-color: var(--kbtw-color-warning-700);
+      --soft-bg-color: var(--kbtw-color-warning-50);
+      --soft-fg-color: var(--kbtw-color-warning-600);
       --disabled-color: var(--kbtw-color-normal-700);
     }
     &__dark {
@@ -129,7 +129,7 @@
       --solid-fg-color: var(--kbtw-color-destructive-0, #23201e);
       --fg-color: var(--accent-color);
       --shade-color: var(--kbtw-color-destructive-300);
-      --soft-bg-color: var(--kbtw-color-destructive-100);
+      --soft-bg-color: var(--kbtw-color-destructive-50);
       --soft-fg-color: var(--kbtw-color-destructive-600);
       --disabled-color: var(--kbtw-color-normal-700);
     }
@@ -152,7 +152,7 @@
       --solid-fg-color: var(--kbtw-color-error-0, #23201e);
       --fg-color: var(--accent-color);
       --shade-color: var(--kbtw-color-error-300);
-      --soft-bg-color: hsl(from var(--kbtw-color-error-200) h s calc(l * 1.1));
+      --soft-bg-color: var(--kbtw-color-error-50);
       --soft-fg-color: var(--kbtw-color-error-600);
       --disabled-color: var(--kbtw-color-normal-700);
     }
@@ -161,8 +161,8 @@
       --solid-fg-color: var(--kbtw-color-error-900, #23201e);
       --fg-color: var(--accent-color);
       --shade-color: var(--kbtw-color-error-50);
-      --soft-bg-color: hsl(from var(--kbtw-color-error-700) h calc(s * 0.6) l);
-      --soft-fg-color: var(--kbtw-color-error-50);
+      --soft-bg-color: hsl(from var(--kbtw-color-error-800) h calc(s * 0.6) l);
+      --soft-fg-color: var(--kbtw-color-error-100);
       --disabled-color: var(--kbtw-color-normal-700);
     }
   }
@@ -173,8 +173,8 @@
       --solid-fg-color: var(--kbtw-color-calm-0, #23201e);
       --fg-color: var(--accent-color);
       --shade-color: var(--kbtw-color-calm-300);
-      --soft-bg-color: var(--kbtw-color-calm-200);
-      --soft-fg-color: var(--kbtw-color-calm-700);
+      --soft-bg-color: var(--kbtw-color-calm-50);
+      --soft-fg-color: var(--kbtw-color-calm-500);
       --disabled-color: var(--kbtw-color-normal-700);
     }
     &__dark {
@@ -225,10 +225,8 @@
       transition-property: background, color, border-color;
       transition-duration: 0.4s;
       transition-timing-function: ease;
-      background: hsl(
-        from var(--soft-bg-color) h calc(s * 1.25) calc(l * 1.25)
-      );
-      border-color: hsl(from var(--shade-color) h s l / 0.75);
+      background: hsl(from var(--accent-color) h s l / 0.3);
+      border-color: var(--accent-color);
     }
     &:disabled {
       transition-property: background, color, border-color;
@@ -247,10 +245,8 @@
       transition-property: background, color, border-color;
       transition-duration: 0.4s;
       transition-timing-function: ease;
-      background: hsl(
-        from var(--soft-bg-color) h calc(s * 1.25) calc(l * 1.25)
-      );
-      border-color: hsl(from var(--shade-color) h s l / 0.75);
+      background: hsl(from var(--accent-color) h s l / 0.15);
+      border-color: hsl(from var(--accent-color) h s l / 0.3);
     }
     &:disabled {
       transition-property: background, color, border-color;
@@ -261,20 +257,16 @@
   }
 
   &__soft {
-    background: hsl(
-      from var(--soft-bg-color) h calc(s * 1.2) calc(l * 1.2) / 0.4
-    );
-    border: 1px solid hsl(from var(--accent-color) h s l / 0.3);
+    background: var(--soft-bg-color);
+    border: 1px solid hsl(from var(--accent-color) h s l / 0.25);
     color: var(--soft-fg-color);
 
     &:hover {
       transition-property: background, color, border-color;
       transition-duration: 0.4s;
       transition-timing-function: ease;
-      background: hsl(
-        from var(--soft-bg-color) h calc(s * 1.25) calc(l * 1.25)
-      );
-      border-color: hsl(from var(--shade-color) h s l / 0.75);
+      background: hsl(from var(--soft-bg-color) h s calc(l * 1.5));
+      border-color: hsl(from var(--shade-color) h s l / 0.3);
     }
     &:disabled {
       transition-property: background, color, border-color;
