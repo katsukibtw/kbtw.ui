@@ -10,7 +10,7 @@
 Heavily inspired by [Joy UI](https://mui.com/joy-ui/getting-started/) and [Google's Material You](https://m3.material.io/), it's perfect for building slick and modern web applications.
 
 ### Typesafe
-Built for usage with Typescript in mind, it integrates seamlessly with no issues in standard React+TS projects.
+Built with Typescript in mind, it integrates seamlessly in React+TS projects.
 
 ### Batteres included
 kbtw.ui does not use any kind of supplemental styling libraries, and comes with everything you need straight out of the box, making it a perfect fit for tiny projects, where size matters.
