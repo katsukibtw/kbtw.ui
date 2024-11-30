@@ -268,8 +268,10 @@
       border-color: hsl(from var(--accent-color) h s l / 0.5);
 
       &:hover {
-        background: hsl(from var(--accent-color) h s l / 0.3);
-        border-color: var(--shade-color-checked);
+        background: hsl(
+          from var(--soft-bg-color) h calc(s * 1.25) calc(l * 1.25)
+        );
+        border-color: hsl(from var(--shade-color) h s l / 0.75);
       }
 
       & > svg {
@@ -299,8 +301,10 @@
 
     &:has(input:checked) {
       &:hover {
-        background: hsl(from var(--accent-color) h s l / 0.3);
-        border-color: var(--accent-color);
+        background: hsl(
+          from var(--soft-bg-color) h calc(s * 1.25) calc(l * 1.25)
+        );
+        border-color: hsl(from var(--shade-color) h s l / 0.75);
       }
 
       & > svg {

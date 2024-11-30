@@ -8,11 +8,15 @@ import {
 } from "@/styles/globalDefs";
 import { useTheme } from "@/hooks/useTheme";
 
-interface Props extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
+export type InputTypesDef = "text" | "email" | "password";
+
+interface Props
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "type"> {
   variant?: VariantTypesDef;
   corners?: CornersTypesDef;
   color?: ColorTypesDef;
   size?: SizeTypesDef;
+  type?: InputTypesDef;
 }
 
 export const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {

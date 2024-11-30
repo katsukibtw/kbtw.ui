@@ -1,12 +1,96 @@
-.kinput {
+.knuminput {
   color: white;
   border: 0;
   border-radius: 0.5rem;
-  padding: calc(0.35rem * var(--size-multiplier, 1)) 0.75rem;
+  //padding: calc(0.35rem * var(--size-multiplier, 1)) 0.75rem;
+  padding: 0;
   cursor: pointer;
   transition-property: background, color, border-color;
   transition-duration: 0.4s;
   transition-timing-function: ease;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  & > input {
+    border-radius: var(--kbtw-ui-corners) 0 0 var(--kbtw-ui-corners);
+    border: 0 !important;
+    transition-property: background, color, border-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    background: transparent;
+    color: inherit;
+    padding: 0 0 0 0.75rem;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  &__btnwrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 var(--kbtw-ui-corners) var(--kbtw-ui-corners) 0;
+    border: 1px solid hsl(from var(--accent-color) h s l / 0.3);
+
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+
+    & > button {
+      width: 1.3rem;
+      flex: 0.5;
+      position: relative;
+      padding: 0;
+      border-radius: 0;
+      transition-property: background, color, border-color;
+      transition-duration: 0.4s;
+      transition-timing-function: ease;
+      background: hsl(
+        from var(--soft-bg-color) h calc(s * 1.2) calc(l * 1.2) / 0.4
+      );
+      border: 1px solid transparent;
+      color: var(--soft-fg-color);
+
+      &:hover {
+        transition-property: background, color, border-color;
+        transition-duration: 0.4s;
+        transition-timing-function: ease;
+        background: hsl(
+          from var(--soft-bg-color) h calc(s * 1.25) calc(l * 1.25)
+        );
+        border-color: hsl(from var(--shade-color) h s l / 0.75) !important;
+      }
+      &:disabled {
+        transition-property: background, color, border-color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        background: var(--disabled-color);
+      }
+
+      &:first-child {
+        border-radius: 0 var(--kbtw-ui-corners) 0 0;
+        border-bottom-color: hsl(from var(--accent-color) h s l / 0.3);
+      }
+
+      &:last-child {
+        border-radius: 0 0 var(--kbtw-ui-corners) 0;
+      }
+
+      & > svg {
+        width: 1.15rem;
+        height: 1.15rem;
+        position: absolute;
+        inset: -0.15rem 0;
+      }
+    }
+  }
 
   &__primary {
     &__light {
@@ -168,7 +252,7 @@
     border: 1px solid var(--accent-color);
     color: var(--solid-fg-color);
 
-    &:hover {
+    & > input:hover {
       transition-property: background, color, border-color;
       transition-duration: 0.4s;
       transition-timing-function: ease;
@@ -182,12 +266,13 @@
       background: var(--disabled-color);
     }
   }
+
   &__outlined {
     background: transparent;
     border: 1px solid hsl(from var(--accent-color) h s l / 0.5);
     color: var(--fg-color);
 
-    &:hover {
+    & > input:hover {
       transition-property: background, color, border-color;
       transition-duration: 0.4s;
       transition-timing-function: ease;
@@ -203,13 +288,12 @@
       background: var(--disabled-color);
     }
   }
-
   &__plain {
     background: transparent;
     border: 1px solid transparent;
     color: var(--fg-color);
 
-    &:hover {
+    & > input:hover {
       transition-property: background, color, border-color;
       transition-duration: 0.4s;
       transition-timing-function: ease;
@@ -233,7 +317,7 @@
     border: 1px solid hsl(from var(--accent-color) h s l / 0.3);
     color: var(--soft-fg-color);
 
-    &:hover {
+    & > input:hover {
       transition-property: background, color, border-color;
       transition-duration: 0.4s;
       transition-timing-function: ease;
